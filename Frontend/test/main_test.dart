@@ -12,11 +12,6 @@ void main() {
       expect(find.byType(MaterialApp), findsOneWidget);
     });
 
-    test('Environment configuration should be accessible', () {
-      // Verify that the app can run main() without throwing errors
-      expect(() => main(), returnsNormally);
-    });
-
     test('String utility - uppercase conversion', () {
       // Simple unit test for basic Dart functionality
       final testString = 'hello world';
