@@ -1,9 +1,9 @@
 # SM2_ExamenUnidad3
 
 ## EXAMEN PRÁCTICO – UNIDAD III
-**Curso:** Desarrollo de Aplicaciones Móviles  
-**Tema:** Automatización de calidad con GitHub Actions  
-**Estudiante:** [Tu Nombre Completo Aquí]  
+**Curso:** Soluciones Moviles II
+**Tema:** Automatización de calidad con GitHub Actions
+**Estudiante:** Rodrigo Samael Adonai Lira Alvarez
 **Fecha:** 18 de noviembre de 2025  
 
 ---
