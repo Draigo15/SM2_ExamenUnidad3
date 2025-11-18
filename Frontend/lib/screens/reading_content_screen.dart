@@ -539,8 +539,7 @@ class _ReadingContentScreenState extends State<ReadingContentScreen> {
                       provider.userAnswers[provider.currentQuestionIndex] ==
                           index ||
                       provider.selectedAnswerIndex == index;
-                  final isCorrect =
-                      question != null && index == question.correctAnswer;
+                  final isCorrect = index == question.correctAnswer;
                   final showCorrectAnswer = provider.showCorrectAnswer;
 
                   // Determine card color based on state
@@ -951,7 +950,7 @@ class _ReadingContentScreenState extends State<ReadingContentScreen> {
       // First wrong attempt - vibrate and show hint with animation
       _showFeedbackAnimation(false);
 
-      if (await Vibration.hasVibrator() ?? false) {
+      if (await Vibration.hasVibrator()) {
         Vibration.vibrate(duration: 500);
       }
 
@@ -969,7 +968,7 @@ class _ReadingContentScreenState extends State<ReadingContentScreen> {
       // Second wrong attempt - stronger feedback
       _showFeedbackAnimation(false);
 
-      if (await Vibration.hasVibrator() ?? false) {
+      if (await Vibration.hasVibrator()) {
         Vibration.vibrate(pattern: [0, 200, 100, 200]);
       }
 
@@ -986,7 +985,7 @@ class _ReadingContentScreenState extends State<ReadingContentScreen> {
       await _showLifeLostAnimation();
 
       // Consume a life
-      final lifeConsumed = await livesProvider.consumeLife();
+      await livesProvider.consumeLife();
 
       // Check if out of lives
       if (livesProvider.currentLives <= 0) {
@@ -1063,8 +1062,6 @@ class _ReadingContentScreenState extends State<ReadingContentScreen> {
 
   /// Handle no lives remaining - save progress and go back
   Future<void> _handleNoLivesRemaining(ReadingContentProvider provider) async {
-    final l10n = AppLocalizations.of(context)!;
-
     // Save progress
     await provider.submitQuiz();
 
@@ -1421,6 +1418,7 @@ class _ReadingContentScreenState extends State<ReadingContentScreen> {
   }
 }
 
+// ignore: unused_element
 extension _ExpandedWidget on Widget {
   Widget get expand => Expanded(child: this);
 }

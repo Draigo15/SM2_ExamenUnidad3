@@ -39,7 +39,6 @@ class _TranslationPanelWidgetState extends State<TranslationPanelWidget>
 
   List<Translation> _relatedTranslations = [];
   bool _isLoadingRelated = false;
-  bool _isFavorite = false;
   String? _error;
 
   @override
@@ -58,11 +57,13 @@ class _TranslationPanelWidgetState extends State<TranslationPanelWidget>
     super.dispose();
   }
 
+  // ignore: unused_element
   void _checkFavoriteStatus() {
     final favoritesProvider =
         Provider.of<FavoritesProvider>(context, listen: false);
     setState(() {
-      _isFavorite = favoritesProvider.isFavorite(widget.originalText);
+      // Check favorite status if needed in the future
+      favoritesProvider.isFavorite(widget.originalText);
     });
   }
 

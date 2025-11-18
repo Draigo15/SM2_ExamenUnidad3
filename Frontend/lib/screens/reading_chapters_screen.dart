@@ -47,9 +47,7 @@ class _ReadingChaptersScreenState extends State<ReadingChaptersScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final chaptersProvider = Provider.of<ReadingChaptersProvider>(context);
     final livesProvider = Provider.of<LivesProvider>(context);
-    final authProvider = Provider.of<AuthProvider>(context);
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surfaceContainer,

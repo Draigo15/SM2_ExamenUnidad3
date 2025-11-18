@@ -8,6 +8,7 @@ abstract class BasePracticeService {
   String get baseEndpoint;
   
   // Common headers for practice requests
+  // ignore: unused_element
   Map<String, String> _getHeaders(String? token) {
     final headers = <String, String>{
       'Content-Type': 'application/json',
