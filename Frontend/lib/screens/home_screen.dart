@@ -12,9 +12,7 @@ import 'settings_screen.dart';
 import 'quiz_screen.dart';
 import 'chapter_episodes_screen.dart';
 import 'chapter_results_screen.dart';
-import 'favorites_screen.dart';
 import 'vocabulary_chapters_screen.dart';
-import 'reading_screen.dart';
 import 'reading_chapters_screen.dart';
 import 'interview_screen.dart';
 
