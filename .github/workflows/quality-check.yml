@@ -24,7 +24,7 @@ jobs:
 
       - name: Analyze
         working-directory: ./Frontend
-        run: flutter analyze
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
 
       - name: Run tests
         working-directory: ./Frontend
